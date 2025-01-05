@@ -278,6 +278,10 @@
 
 lotr_yearly_playable_pulse = {
 	effect = {
+
+		# Variag Invasions
+		variag_ai_chance_to_become_conqueror_effect = yes
+
 		### Thani-Hazad Struggle Catalysts ###
 		if = { # Struggle Catalyst
 			limit = {
@@ -776,6 +780,10 @@ lotr_five_year_everyone_pulse = {
 				}
 				set_global_variable = lotr_achievement_64
 			}
+		}
+
+		if = {
+			limit = { }
 		}
 	}
 }
