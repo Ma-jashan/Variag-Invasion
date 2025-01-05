@@ -12,32 +12,32 @@ variag_invasion.0001 = { # Begin Variag Invasion
 		animation = personality_bold
 	}
 
-	option = { # Revolt against Sauron
-		name = variag_invasion.0100.a
-		custom_tooltip = {
-			text = variags_betray_sauron
-		}
-		trigger_event = {
-			id = variag_invasion.0002
-			days = 30
-		}
-
-		if = {
-			limit = { NOT = { faith = faith:faith_khandish_traditional } }
-			set_character_faith_with_conversion = faith:faith_khandish_traditional
-			hidden_effect = {
-				faith:faith_khandish_traditional = {
-					change_fervor = {
-						value = 10
-					}
-				}
-			}
-		}
-	
-		ai_chance = {
-			base = 100
-		}
-	}
+	#option = { # Revolt against Sauron
+		#name = variag_invasion.0100.a
+		#custom_tooltip = {
+			#text = variags_betray_sauron
+		#}
+		#trigger_event = {
+			# id = variag_invasion.0002
+			#days = 30
+		#}
+#
+		#if = {
+			#limit = { NOT = { faith = faith:faith_khandish_traditional } }
+			#set_character_faith_with_conversion = faith:faith_khandish_traditional
+			#hidden_effect = {
+				#faith:faith_khandish_traditional = {
+					#change_fervor = {
+						#value = 10
+					#}
+				#}
+			#}
+		#}
+#	
+		#ai_chance = {
+			#base = 100
+		#}
+	#}
 
 	option = { # Remain Loyal to Sauron
 		name = variag_invasion.0100.b
@@ -56,140 +56,140 @@ variag_invasion.0001 = { # Begin Variag Invasion
 	}
 }
 
-variag_invasion.0002 = { # Prelude to war
-	content_source = realms_dlc
-	type = character_event
-	title = variag_invasion.0100.t
-	desc = variag_invasion.0100.desc
-	theme = realm
-
-	left_portrait = {
-		character = root
-		animation = threatening
-	}
-	right_portrait = {
-		character = character:lineofsauron = { save_scope_as = sauron }
-		animation = rage
-	}
-
-	immediate = {
-		name = variag_invasion.0100.a
-		custom_tooltip = {
-			text = variags_betray_sauron
-		}
-
-		spawn_army = {		  
-			uses_supply = no
-			inheritable = no
-			name = mustered_rohirrim_event_troops
-			men_at_arms = {
-				type = variag_horse_archers
-				stacks = 4
-			}
-			men_at_arms = {
-				type = windriders_of_khand
-				stacks = 6
-			}
-			men_at_arms = {
-				type = variag_axemen
-				stacks = 3
-			}
-			men_at_arms = {
-				type = variag_pikemen
-				stacks = 6
-			}
-			men_at_arms = {
-				type = trebuchet
-				stacks = 10
-			}
-			location = capital_province
-		}
-		spawn_army = {		  
-			uses_supply = no
-			inheritable = no
-			name = mustered_rohirrim_event_troops
-			men_at_arms = {
-				type = variag_horse_archers
-				stacks = 3
-			}
-			men_at_arms = {
-				type = windriders_of_khand
-				stacks = 5
-			}
-			men_at_arms = {
-				type = variag_axemen
-				stacks = 4
-			}
-			men_at_arms = {
-				type = variag_pikemen
-				stacks = 2
-			}
-			men_at_arms = {
-				type = trebuchet
-				stacks = 10
-			}
-			location = capital_province
-		}
-		spawn_army = {		  
-			uses_supply = no
-			inheritable = no
-			name = mustered_rohirrim_event_troops
-			men_at_arms = {
-				type = variag_horse_archers
-				stacks = 12
-			}
-			men_at_arms = {
-				type = windriders_of_khand
-				stacks = 17
-			}
-			men_at_arms = {
-				type = trebuchet
-				stacks = 10
-			}
-			location = capital_province
-		}
-	}
-
-	option = { 
-		name = lotr_intro_events.7004.a
-
-		trigger_event = {
-			id = variag_invasion.0003
-			days = 180
-		}
-	}
-}
-
-variag_invasion.0003 = { # Independance War begins
-	content_source = realms_dlc
-	type = character_event
-	title = variag_invasion.0100.t
-	desc = variag_invasion.0100.desc
-	theme = realm
-
-	left_portrait = {
-		character = root
-		animation = threatening
-	}
-	right_portrait = {
-		character = scope:sauron
-		animation = rage
-	}
-
-	immediate = {
-		name = variag_invasion.0100.a
-		custom_tooltip = {
-			text = variags_betray_sauron
-		}
-	}
-
-	option = { 
-		name = lotr_intro_events.7004.a
-
-		start_war = {
-			casus_belli = independence_tributary_war_cb
-			target = title:e_mordor.holder
-			target_title = title:e_mordor
-		}
-	}
-}
+#variag_invasion.0002 = { # Prelude to war
+	#content_source = realms_dlc
+	#type = character_event
+	#title = variag_invasion.0100.t
+	#desc = variag_invasion.0100.desc
+	#theme = realm
+#
+	#left_portrait = {
+		#character = root
+		#animation = threatening
+	#}
+	#right_portrait = {
+		#character = character:lineofsauron = { save_scope_as = sauron }
+		#animation = rage
+	#}
+#
+	#immediate = {
+		#name = variag_invasion.0100.a
+		#custom_tooltip = {
+			#text = variags_betray_sauron
+		#}
+#
+		#spawn_army = {		  
+			#uses_supply = no
+			#inheritable = no
+			#name = mustered_rohirrim_event_troops
+			#men_at_arms = {
+				#type = variag_horse_archers
+				#stacks = 4
+			#}
+			#men_at_arms = {
+				#type = windriders_of_khand
+				#stacks = 6
+			#}
+			#men_at_arms = {
+				#type = variag_axemen
+				#stacks = 3
+			#}
+			#men_at_arms = {
+				#type = variag_pikemen
+				#stacks = 6
+			#}
+			#men_at_arms = {
+				#type = trebuchet
+				#stacks = 10
+			#}
+			#location = capital_province
+		#}
+		#spawn_army = {		  
+			#uses_supply = no
+			#inheritable = no
+			#name = mustered_rohirrim_event_troops
+			#men_at_arms = {
+				#type = variag_horse_archers
+				#stacks = 3
+			#}
+			#men_at_arms = {
+				#type = windriders_of_khand
+				#stacks = 5
+			#}
+			#men_at_arms = {
+				#type = variag_axemen
+				#stacks = 4
+			#}
+			#men_at_arms = {
+				#type = variag_pikemen
+				#stacks = 2
+			#}
+			#men_at_arms = {
+				#type = trebuchet
+				#stacks = 10
+			#}
+			#location = capital_province
+		#}
+		#spawn_army = {		  
+			#uses_supply = no
+			#inheritable = no
+			#name = mustered_rohirrim_event_troops
+			#men_at_arms = {
+				#type = variag_horse_archers
+				#stacks = 12
+			#}
+			#men_at_arms = {
+				#type = windriders_of_khand
+				#stacks = 17
+			#}
+			#men_at_arms = {
+				#type = trebuchet
+				#stacks = 10
+			#}
+			#location = capital_province
+		#}
+	#}
+#
+	#option = { 
+		#name = lotr_intro_events.7004.a
+#
+		#trigger_event = {
+			#id = variag_invasion.0003
+			#days = 180
+		#}
+	#}
+#}
+#
+#variag_invasion.0003 = { # Independance War begins
+	#content_source = realms_dlc
+	#type = character_event
+	#title = variag_invasion.0100.t
+	#desc = variag_invasion.0100.desc
+	#theme = realm
+#
+	#left_portrait = {
+		#character = root
+		#animation = threatening
+	#}
+	#right_portrait = {
+		#character = scope:sauron
+		#animation = rage
+	#}
+#
+	#immediate = {
+		#name = variag_invasion.0100.a
+		#custom_tooltip = {
+			#text = variags_betray_sauron
+		#}
+	#}
+#
+	#option = { 
+		#name = lotr_intro_events.7004.a
+#
+		#start_war = {
+			#casus_belli = independence_tributary_war_cb
+			#target = title:e_mordor.holder
+			#target_title = title:e_mordor
+		#}
+	#}
+#}

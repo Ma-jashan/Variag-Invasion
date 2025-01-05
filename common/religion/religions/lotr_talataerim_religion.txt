@@ -390,36 +390,36 @@ talataerim_religion = {
 		}
 		
 		
-		faith_khandish_traditional = { # The traditional pantheon of Khand.
-		color = { 76 84 176 }
-		icon = muhakkima_custom_2
-		
-		holy_site = lest
-		holy_site = sturlurzanurn
-		holy_site = thaurband
-		holy_site = starlurtsa_khand
-		holy_site = hron_tumrakhi
-		holy_site = obamarl
-		
-		doctrine = tenet_warmonger
-		doctrine = tenet_communal_identity # Want as little conversion as possible to cause the most unstable Variag collapses
-		doctrine = tenet_reincarnation # The Khandish hold that their greatest kings are reincarnated to lead them again	
-		
-		doctrine = doctrine_concubines
-		doctrine = doctrine_divorce_allowed
-		doctrine = doctrine_bastardry_all
-		doctrine = doctrine_kinslaying_close_kin_crime
-		doctrine = doctrine_pluralism_pluralistic # Want as little conversion as possible to cause the most unstable Variag collapses
-		doctrine = doctrine_theocracy_temporal
-		doctrine = doctrine_no_head
-		doctrine = doctrine_clerical_function_recruitment
-		doctrine = doctrine_clerical_gender_female_only
-		doctrine = doctrine_a_people_apart #Make them attack everyone
-		doctrine = doctrine_clerical_succession_spiritual_fixed_appointment
-		doctrine = doctrine_clerical_marriage_disallowed
-		
-		# We know nothing about the old gods of Khand so it's just the default taltaerim loc
-	}
+		#faith_khandish_traditional = { # The traditional pantheon of Khand.
+		#color = { 76 84 176 }
+		#icon = muhakkima_custom_2
+#		
+		#holy_site = lest
+		#holy_site = sturlurzanurn
+		#holy_site = thaurband
+		#holy_site = starlurtsa_khand
+		#holy_site = hron_tumrakhi
+		#holy_site = obamarl
+#		
+		#doctrine = tenet_warmonger
+		#doctrine = tenet_communal_identity # Want as little conversion as possible to cause the most unstable Variag collapses
+		#doctrine = tenet_reincarnation # The Khandish hold that their greatest kings are reincarnated to lead them again	
+#		
+		#doctrine = doctrine_concubines
+		#doctrine = doctrine_divorce_allowed
+		#doctrine = doctrine_bastardry_all
+		#doctrine = doctrine_kinslaying_close_kin_crime
+		#doctrine = doctrine_pluralism_pluralistic # Want as little conversion as possible to cause the most unstable Variag collapses
+		#doctrine = doctrine_theocracy_temporal
+		#doctrine = doctrine_no_head
+		#doctrine = doctrine_clerical_function_recruitment
+		#doctrine = doctrine_clerical_gender_female_only
+		#doctrine = doctrine_a_people_apart #Make them attack everyone
+		#doctrine = doctrine_clerical_succession_spiritual_fixed_appointment
+		#doctrine = doctrine_clerical_marriage_disallowed
+#		
+		## We know nothing about the old gods of Khand so it's just the default taltaerim loc
+	#}
 	
 	### Nurn Faiths ###
 		faith_nurniag = {
