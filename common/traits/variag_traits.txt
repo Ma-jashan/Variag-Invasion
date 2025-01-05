@@ -1,0 +1,36 @@
+variag_conqueror = {
+	category = fame
+
+	diplomacy = 3
+	martial = 5
+	prowess = 5
+
+	dread_baseline_add = 50
+	dread_decay_mult = -0.5
+	same_culture_opinion = 25
+	vassal_limit = 75
+	clan_tax_slot_add  = 10
+
+	archer_cavalry_siege_value_add = 0.5
+	light_cavalry_siege_value_add = 0.5
+
+	archer_cavalry_toughness_mult = 1
+	light_cavalry_toughness_mult = 1
+	
+	archer_cavalry_damage_mult = 1
+	light_cavalry_damage_mult = 1
+	
+	shown_in_ruler_designer = no
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_variag_conqueror_desc
+			}
+			desc = trait_variag_conqueror_character_desc
+		}
+	}
+}

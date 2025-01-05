@@ -1,0 +1,215 @@
+decision_variag_conqueror = {
+	title = decision_become_variag_conqueror
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_harad_04.dds"
+	}
+	
+	selection_tooltip = decision_become_variag_conqueror_tooltip
+	desc = decision_variag_conqueror_desc
+	
+	confirm_text = decision_variag_conqueror_confirm
+	
+	decision_group_type = realms_in_exile_major
+	
+	is_shown = {
+		OR = {
+			culture = culture:variag 
+			culture = { any_parent_culture_or_above = { this = culture:variag } }
+		}
+		is_landed = yes
+		capital_county.empire ?= title:e_khand
+		NOT = { 
+			has_trait = variag_conqueror
+		}
+	}
+	is_valid = {
+		has_title = title:e_khand
+	}
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_independent_ruler = yes
+	}
+	
+	effect = {
+		add_trait = variag_conqueror
+		trigger_event = variag_invasion.0001
+	}
+
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+}
+
+decision_variags_destroy_mordor = {
+	sort_order = 100
+	title = decision_destroy_mordor
+	picture = {
+		trigger = {
+			OR = {
+				is_gondor = yes
+				has_primary_title = title:e_numenor_in_exile
+				has_primary_title = title:e_reunitedkingdom
+			}
+		}
+		reference = "gfx/interface/illustrations/decisions/decision_gondor_01.dds"
+	}
+	picture = {
+		trigger = {
+			culture ?= {
+				OR = {
+					has_cultural_pillar = heritage_ioriag
+					has_cultural_pillar = heritage_igath
+				}
+			}
+		}
+		reference = "gfx/interface/illustrations/decisions/decision_huz_02.dds"
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_barad_dur_01.dds"
+	}
+
+	decision_group_type = realms_in_exile_major
+	
+	selection_tooltip = decision_destroy_mordor_tooltip
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_gondor = yes
+						has_primary_title = title:e_numenor_in_exile
+						has_primary_title = title:e_reunitedkingdom
+					}
+				}
+				desc = decision_destroy_mordor_desc
+			}
+			desc = decision_destroy_mordor_generic_desc
+		}
+	}
+	confirm_text = decision_destroy_mordor_confirm
+	
+	cooldown = { years = 5 }
+
+	is_shown = {
+		is_ai = no
+		is_ruler = yes
+		is_landed = yes
+		exists = title:e_mordor.holder
+		title:e_mordor.holder = { is_maiar_fallen = yes }
+		NOR = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:decision_destroy_mordor
+			}
+			has_title = title:e_mordor
+		}
+	}
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+		NOR = {
+			has_truce = title:e_mordor.holder
+			exists = var:my_suzerain
+		}
+		NOT = {
+			custom_description = {
+				text = faith_is_evil
+				subject = this
+				faith_is_evil = yes
+			}
+		}
+	}
+	is_valid = {
+		OR = {
+			trigger_if = {
+				limit = {
+					text = destroy_mordor_decision_current_military_strength_default_tt
+					root.script_current_military_strength >= title:e_mordor.holder.fifty_percent_of_current_military_strength
+				}
+			}
+		}
+		is_independent_ruler = yes
+	}
+	effect = {
+		play_music_cue = lotr_cue_gondor
+		custom_tooltip = destroy_mordor_decision
+		if = {
+			limit = { exists = title:e_mordor.holder }
+			start_war = {
+				casus_belli = final_battle_variags_cb
+				target = title:e_mordor.holder
+				target_title = title:e_mordor
+			}
+			
+		}
+	}
+}
+
+decision_variags_destroy_mordor_AI = {
+	sort_order = 100
+	title = decision_destroy_mordor
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_gondor_01.dds"
+	}
+
+	decision_group_type = realms_in_exile_major
+	
+	ai_goal = yes
+	ai_potential = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 100
+	}
+	selection_tooltip = decision_destroy_mordor_tooltip
+	desc = decision_destroy_mordor_desc
+	confirm_text = decision_destroy_mordor_confirm
+	
+	cooldown = { years = 5 }
+
+	is_shown = {
+		is_ai = yes
+		is_ruler = yes
+		is_adult = yes
+		is_landed = yes
+		has_trait = variag_conqueror
+		exists = title:e_mordor.holder
+		title:e_mordor.holder = character:lineofsauron
+		NOR = {
+			has_truce = title:e_mordor.holder
+			custom_description = {
+				text = faith_is_evil
+				subject = this
+				faith_is_evil = yes
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		NOR = {
+			has_truce = title:e_mordor.holder
+			exists = var:my_suzerain
+		}
+		NOT = {
+			custom_description = {
+				text = faith_is_evil
+				subject = this
+				faith_is_evil = yes
+			}
+		}
+	}
+
+	effect = {
+		start_war = {
+			casus_belli = final_battle_variags_cb
+			target = title:e_mordor.holder
+			target_title = title:e_mordor
+		}
+	}
+}

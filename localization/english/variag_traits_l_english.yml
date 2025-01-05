@@ -1,0 +1,5 @@
+﻿l_english:
+	#Variag Conqueror
+ trait_variag_conqueror:0 "Khûdriag-Ata"
+ trait_variag_conqueror_desc:0 "This character has claimed the mantle of God-King to remind [middleearth|E] who they should really fear."
+ trait_variag_conqueror_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has claimed the mantle of God-King to remind [middleearth|E] who they should really fear."
