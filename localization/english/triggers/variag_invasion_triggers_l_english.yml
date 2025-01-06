@@ -2,3 +2,5 @@ l_english:
 
  chosen_cannot_force_non_chosen_to_convert:0 "Variags don't allow others to worship Tûmrakhi the same way they do"
  chosen_can_only_faith_convert_chosen:0 "Variags don't allow others to worship Tûmrakhi the same way they do"
+ chosen_cannot_willingly_convert:0 "Variags don't allow others to worship Tûmrakhi the same way they do"
+ non_chosen_cannot_convert_to_chosen:0 "Variags don't allow others to worship Tûmrakhi the same way they do"

@@ -8,8 +8,10 @@ is_chosen_people_ = {
 	}
 
 	special_doctrine_is_chosen_people = {
-		character_modifier = {
-			minority_opinion = -20
+		parameters = {
+			zealous_trait_more_common = yes
+			harder_to_convert_character_faith = yes
+			harder_to_convert_county_faith = yes
 		}
 	}
 }
