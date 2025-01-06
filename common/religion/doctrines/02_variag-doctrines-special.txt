@@ -1,0 +1,13 @@
+﻿# Special doctrine to make variags not conver other cultures to their religion 
+
+is_chosen_people_ = {
+	group = "special"
+	
+	is_available_on_create = {
+		has_doctrine = special_doctrine_is_chosen_people
+	}
+
+	special_doctrine_is_chosen_people = {
+
+	}
+}
