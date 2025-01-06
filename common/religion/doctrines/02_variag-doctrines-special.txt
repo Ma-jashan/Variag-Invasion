@@ -8,6 +8,8 @@ is_chosen_people_ = {
 	}
 
 	special_doctrine_is_chosen_people = {
-
+		character_modifier = {
+			minority_opinion = -20
+		}
 	}
 }

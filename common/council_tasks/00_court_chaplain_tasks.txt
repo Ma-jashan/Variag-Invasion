@@ -567,10 +567,13 @@ task_conversion = {
 			trigger_if = { #Variag Invasion - Variags should not seek to convert non-Variags due to their belief of being the chosen people
 				limit = {
 					scope:councillor_liege = {
-						has_doctrine = special_doctrine_is_chosen_people
+						faith = { has_doctrine = special_doctrine_is_chosen_people }
 					}
 				}
-				culture = culture:variag
+				custom_tooltip = {
+					text = chosen_can_only_faith_convert_chosen
+					culture = root.culture
+				}
 			}
 			custom_description = {
 				text = "is_protected_via_contract_self_or_liege"
