@@ -6,3 +6,5 @@
  variags_betray_sauron:0 "You enlighten your kin about the old Gods."
  variag_invasion.0100.b:0 "Enough of the blasphemy!"
  variags_loyal_to_sauron:0 "Tales of your exploits will be marred forever by the shadow of Mordor..."
+
+ variag_invasion_event_troops:0 "Variag Hosts"

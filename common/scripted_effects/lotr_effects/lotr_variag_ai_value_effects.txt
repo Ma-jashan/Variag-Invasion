@@ -16,6 +16,7 @@
 				has_character_flag = used_to_be_conqueror
 				has_trait = content
 				has_trait = shy
+				has_trait = conqueror
 				has_trait = lazy
 			}
 			trigger_if = {
@@ -44,17 +45,9 @@
 				}
 			}
 		}
-		if = {
-			limit = {
-				is_ai = no
-			}
-			trigger_event = {
-				id = conqueror.0001
-				days = 10
-			}
-		}
-		else = {
-			trigger_event = conqueror.0001
+		trigger_event = {
+			id = conqueror.0001
+			days = 10
 		}
 	}
 }
