@@ -5,7 +5,7 @@
 			is_independent_ruler = yes
 			is_landed = yes
 			is_adult = yes
-			has_culture = culture:variag
+			faith = { has_doctrine = special_doctrine_is_chosen_people }
 			age <= 60
 			NOT = { is_incapable = yes }
 			highest_held_title_tier >= tier_duchy
@@ -14,6 +14,9 @@
 					is_ai = no # Would be annoying as conquerors don't help their allies
 				}
 				has_character_flag = used_to_be_conqueror
+				has_trait = content
+				has_trait = shy
+				has_trait = lazy
 			}
 			trigger_if = {
 				limit = {
@@ -24,9 +27,9 @@
 						has_game_rule = strong_many_conquerors_frequency
 					}
 				}
-				sub_realm_size >= 15
+				sub_realm_size >= 10
 				domain_size >= 3
-				current_military_strength >= 3000
+				current_military_strength >= 2000
 				gold >= 200
 				age <= 40
 			}
@@ -37,7 +40,7 @@
 				}
 				AND = {
 					exists = global_var:active_conquerors 
-					global_var:active_conquerors < 12
+					global_var:active_conquerors < 20
 				}
 			}
 		}

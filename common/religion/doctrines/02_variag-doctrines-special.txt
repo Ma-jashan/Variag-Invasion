@@ -1,6 +1,6 @@
 ﻿# Special doctrine to make variags not conver other cultures to their religion 
 
-is_chosen_people_ = {
+is_chosen_people = {
 	group = "special"
 	
 	is_available_on_create = {
@@ -8,10 +8,10 @@ is_chosen_people_ = {
 	}
 
 	special_doctrine_is_chosen_people = {
-		parameters = {
-			zealous_trait_more_common = yes
-			harder_to_convert_character_faith = yes
-			harder_to_convert_county_faith = yes
-		}
+#		parameters = {
+#			zealous_trait_more_common = yes
+#			harder_to_convert_character_faith = yes
+#			harder_to_convert_county_faith = yes
+#		}
 	}
 }

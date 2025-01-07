@@ -33,7 +33,7 @@ invasion_war = {
 		# Variag Invasion
 		NOT = {
 			AND = {
-				culture = culture:variag
+				faith = { has_doctrine = special_doctrine_is_chosen_people }
 				has_trait = conqueror
 			}
 		}
@@ -559,8 +559,8 @@ clan_invasion_war = {
 		# Variag Invasion
 		NOT = {
 			AND = {
-				culture = culture:variag
-				has_trait = conqueror
+				scope:recipient = { faith = { has_doctrine = special_doctrine_is_chosen_people } } 
+				has_trait = conqueror				
 			}
 		}
 		NAND = {

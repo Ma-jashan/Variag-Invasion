@@ -1741,15 +1741,6 @@ convert_to_religion_interaction = {
 			}
 		}
 		custom_tooltip = { # Variag Invasion
-			text = chosen_cannot_willingly_convert
-			NOT = {
-				AND = {
-					scope:recipient = { NOT = { faith = { has_doctrine = special_doctrine_is_chosen_people } } }
-					scope:actor = { faith = { has_doctrine = special_doctrine_is_chosen_people } }
-				}
-			}
-		}
-		custom_tooltip = { # Variag Invasion
 		text = non_chosen_cannot_convert_to_chosen
 		NOT = {
 			AND = {

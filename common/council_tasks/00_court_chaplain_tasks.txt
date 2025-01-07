@@ -571,7 +571,7 @@ task_conversion = {
 					}
 				}
 				custom_tooltip = {
-					text = chosen_can_only_faith_convert_chosen
+					text = chosen_can_only_county_convert_chosen
 					culture = root.culture
 				}
 			}

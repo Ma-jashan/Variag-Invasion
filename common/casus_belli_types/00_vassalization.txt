@@ -33,7 +33,7 @@ vassalization_cb = {
 		# Variag Invasion
 		NOT = {
 			AND = {
-				culture = culture:variag
+				faith = { has_doctrine = special_doctrine_is_chosen_people }
 				has_trait = conqueror
 			}
 		}
