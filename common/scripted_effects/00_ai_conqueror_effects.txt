@@ -1698,9 +1698,11 @@
 				on_failure = {
 					ai_start_best_war = { # Start one very high-impact war with a very good CB
 						cb = {
+							claim_cb
+							variag_subjugation_war
+							variag_realm_subjugation_war
 							variag_invasion_war
 							variag_realm_invasion_war
-							claim_cb
 							religious_war
 							# imperial_reconquest_cb
 							major_religious_war
@@ -1731,9 +1733,11 @@
 								50 = {
 									ai_start_best_war = {
 										cb = {
+											claim_cb
+											variag_subjugation_war
+											variag_realm_subjugation_war
 											variag_invasion_war
 											variag_realm_invasion_war
-											claim_cb
 											duchy_conquest_cb
 											religious_war
 											# imperial_reconquest_cb
@@ -1815,9 +1819,11 @@
 								50 = {
 									ai_start_best_war = {
 										cb = {
+											claim_cb
+											variag_subjugation_war
+											variag_realm_subjugation_war
 											variag_invasion_war
 											variag_realm_invasion_war
-											claim_cb
 											duchy_conquest_cb
 											religious_war
 											# imperial_reconquest_cb
@@ -1888,9 +1894,11 @@
 									}
 									ai_start_best_war = {
 										cb = {
+											claim_cb
+											variag_subjugation_war
+											variag_realm_subjugation_war
 											variag_invasion_war
 											variag_realm_invasion_war
-											claim_cb
 											duchy_conquest_cb
 											religious_war
 											# imperial_reconquest_cb
@@ -1913,9 +1921,11 @@
 									}
 									ai_start_best_war = {
 										cb = {
+											claim_cb
+											variag_subjugation_war
+											variag_realm_subjugation_war
 											variag_realm_invasion_war
 											variag_invasion_war
-											claim_cb
 											duchy_conquest_cb
 											religious_war
 											# imperial_reconquest_cb

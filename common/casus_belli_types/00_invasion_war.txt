@@ -559,7 +559,7 @@ clan_invasion_war = {
 		# Variag Invasion
 		NOT = {
 			AND = {
-				scope:recipient = { faith = { has_doctrine = special_doctrine_is_chosen_people } } 
+				faith = { has_doctrine = special_doctrine_is_chosen_people } 
 				has_trait = conqueror				
 			}
 		}
