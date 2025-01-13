@@ -264,6 +264,29 @@ variag_invasion_war = {
 			}
 		}
 
+		scope:defender = {
+			# Loot tooltip for display
+			every_held_county = {
+				custom = mongol_invasion_loot_county_tt
+				random = {
+					chance = scope:attacker.martial
+					custom_tooltip = mongol_invasion_loot_gold_tt
+					custom_tooltip = mongol_invasion_loot_development_tt
+					custom_tooltip = mongol_invasion_loot_dread_tt
+				}
+			}
+			hidden_effect = {
+				# New title looting
+				every_held_title = {
+					custom = mongol_invasion_loot_chance_tt
+					limit = {
+						is_in_list = titles_taken
+					}
+					variag_invasion_county_looting_chance_effect = yes
+				}
+			}
+		}
+
 		resolve_title_and_vassal_change = scope:change
 
 		# Allies on both sides get full prestige value for helping in the war, based on their war participation.
@@ -455,8 +478,8 @@ variag_invasion_war = {
 	attacker_allies_inherit = yes
 	defender_allies_inherit = yes
 
-	war_name = "RELIGIOUS_WAR_NAME"
-	cb_name = "HOLY_WAR_KINGDOM_NAME"
+	war_name = "VARIAG_INVASION_WAR_NAME"
+	cb_name = "VARIAG_INVASION_KINGDOM_NAME"
 
 	is_holy_war = yes
 
@@ -955,8 +978,8 @@ variag_realm_invasion_war = {
 	attacker_allies_inherit = yes
 	defender_allies_inherit = yes
 
-	war_name = "RELIGIOUS_WAR_NAME"
-	cb_name = "HOLY_WAR_KINGDOM_NAME"
+	war_name = "VARIAG_INVASION_WAR_NAME"
+	cb_name = "VARIAG_INVASION_EMPIRE_NAME"
 
 	is_holy_war = yes
 
@@ -1197,39 +1220,6 @@ variag_subjugation_war = {
 				take_occupied = yes
 			}
 		}
-		
-		scope:defender = {
-			# Loot tooltip for display
-			every_held_county = {
-				custom = mongol_invasion_loot_county_tt
-				random = {
-					chance = scope:attacker.martial
-					custom_tooltip = mongol_invasion_loot_gold_tt
-					custom_tooltip = mongol_invasion_loot_development_tt
-					custom_tooltip = mongol_invasion_loot_dread_tt
-				}
-			}
-			hidden_effect = {
-				# Sub realm looting
-				every_sub_realm_county = {
-					custom = mongol_invasion_loot_chance_tt
-					limit = {
-						duchy.kingdom.empire = { is_in_list = target_titles }
-					}
-					mongol_invasion_county_looting_chance_effect = yes
-				}
-				# Vassal sub realm looting
-				every_vassal_or_below = {
-					every_sub_realm_county = {
-						limit = {
-							holder = { is_ai = yes }
-							duchy.kingdom.empire = { is_in_list = target_titles }
-						}
-						mongol_invasion_county_looting_chance_effect = yes
-					}
-				}
-			}
-		}
 
 		resolve_title_and_vassal_change = scope:change
 		
@@ -1429,8 +1419,8 @@ variag_subjugation_war = {
 	attacker_allies_inherit = yes
 	defender_allies_inherit = yes
 	
-	war_name = "MONGOL_INVASION_WAR_NAME"
-	cb_name = "MONGOL_INVASION_KINGDOM_CB_NAME"
+	war_name = "VARIAG_SUBJUGATION_WAR_NAME"
+	cb_name = "VARIAG_SUBJUGATION_KINGDOM_NAME"
 	
 	interface_priority = 100
 	
@@ -1444,7 +1434,7 @@ variag_subjugation_war = {
 }
 
 variag_realm_subjugation_war = {
-	icon = invasion
+	icon = vassalization
 	group = invasion
 
 	combine_into_one = yes
@@ -1678,39 +1668,6 @@ variag_realm_subjugation_war = {
 				take_occupied = yes
 			}
 		}
-		
-		scope:defender = {
-			# Loot tooltip for display
-			every_held_county = {
-				custom = mongol_invasion_loot_county_tt
-				random = {
-					chance = scope:attacker.martial
-					custom_tooltip = mongol_invasion_loot_gold_tt
-					custom_tooltip = mongol_invasion_loot_development_tt
-					custom_tooltip = mongol_invasion_loot_dread_tt
-				}
-			}
-			hidden_effect = {
-				# Sub realm looting
-				every_sub_realm_county = {
-					custom = mongol_invasion_loot_chance_tt
-					limit = {
-						duchy.kingdom.empire = { is_in_list = target_titles }
-					}
-					mongol_invasion_county_looting_chance_effect = yes
-				}
-				# Vassal sub realm looting
-				every_vassal_or_below = {
-					every_sub_realm_county = {
-						limit = {
-							holder = { is_ai = yes }
-							duchy.kingdom.empire = { is_in_list = target_titles }
-						}
-						mongol_invasion_county_looting_chance_effect = yes
-					}
-				}
-			}
-		}
 
 		resolve_title_and_vassal_change = scope:change
 		
@@ -1915,8 +1872,8 @@ variag_realm_subjugation_war = {
 	attacker_allies_inherit = yes
 	defender_allies_inherit = yes
 	
-	war_name = "MONGOL_INVASION_WAR_NAME"
-	cb_name = "MONGOL_INVASION_EMPIRE_CB_NAME"
+	war_name = "VARIAG_SUBJUGATION_WAR_NAME"
+	cb_name = "VARIAG_SUBJUGATION_EMPIRE_NAME"
 	
 	interface_priority = 100
 	
