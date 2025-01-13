@@ -50,15 +50,15 @@ conqueror.0001 = {
 			name = variag_invasion_event_troops
 			men_at_arms = {
 				type = variag_horse_archers
-				stacks = 11
+				stacks = 22
 			}
 			men_at_arms = {
 				type = windriders_of_khand
-				stacks = 8
+				stacks = 16
 			}
 			men_at_arms = {
 				type = trebuchet
-				stacks = 10
+				stacks = 20
 			}
 			location = capital_province
 		}
@@ -716,7 +716,30 @@ conqueror.1100 = {
 		
 		add_courtier = scope:maa_leader
 		
-		if = {
+		if = { # Variag Invasion - Troops
+			limit = {
+				faith = { has_doctrine = special_doctrine_is_chosen_people }
+			}
+			spawn_army = {		  
+				uses_supply = no
+				inheritable = no
+				name = variag_invasion_event_troops
+				men_at_arms = {
+					type = variag_horse_archers
+					stacks = 22
+				}
+				men_at_arms = {
+					type = windriders_of_khand
+					stacks = 16
+				}
+				men_at_arms = {
+					type = trebuchet
+					stacks = 20
+				}
+				location = root.capital_province
+			}
+		}
+		else_if = {
 			limit = {
 				scope:generous_vassal.culture = { culture_has_archer_cavalry_maa = yes }
 			}
