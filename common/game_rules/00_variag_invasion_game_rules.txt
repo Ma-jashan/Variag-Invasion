@@ -1,0 +1,34 @@
+﻿
+variag_invasion_start_rule = {
+	default = variag_invasion_on_sauron_defeat
+
+	categories = {
+		realms historicity ai
+	}
+
+	variag_invasion_on_sauron_defeat = {
+
+	}
+
+	variag_invasion_on_game_start = {
+
+	}
+	
+}
+
+tumrakhi_chosen_doctrine_rule = {
+	default = tumrakhi_chosen_enabled
+
+	categories = {
+		realms historicity faith
+	}
+
+	tumrakhi_chosen_enabled = {
+
+	}
+
+	tumrakhi_chosen_disabled = {
+
+	}
+	
+}

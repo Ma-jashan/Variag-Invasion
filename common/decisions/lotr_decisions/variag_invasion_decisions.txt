@@ -12,18 +12,24 @@ decision_variag_conqueror = {
 	decision_group_type = realms_in_exile_major
 	
 	is_shown = {
-		OR = {
+		AND = {
 			culture = culture:variag 
-			culture = { any_parent_culture_or_above = { this = culture:variag } }
+			faith = { has_doctrine = special_doctrine_is_chosen_people }
 		}
 		is_landed = yes
-		capital_county.empire ?= title:e_khand
 		NOT = { 
 			has_trait = variag_conqueror
 		}
 	}
 	is_valid = {
-		has_title = title:e_khand
+		OR = {
+			has_title = title:e_khand
+			AND = {
+				completely_controls = title:k_lower_khand
+				completely_controls = title:k_upper_khand
+        		highest_held_title_tier = tier_empire
+			}
+		}
 	}
 	is_valid_showing_failures_only = {
 		is_adult = yes
@@ -32,7 +38,76 @@ decision_variag_conqueror = {
 	
 	effect = {
 		add_trait = variag_conqueror
-		trigger_event = variag_invasion.0001
+		spawn_army = {		  
+			uses_supply = no
+			inheritable = no
+			name = variag_invasion_event_troops
+			men_at_arms = {
+				type = variag_horse_archers
+				stacks = 4
+			}
+			men_at_arms = {
+				type = windriders_of_khand
+				stacks = 6
+			}
+			men_at_arms = {
+				type = variag_axemen
+				stacks = 3
+			}
+			men_at_arms = {
+				type = variag_pikemen
+				stacks = 6
+			}
+			men_at_arms = {
+				type = trebuchet
+				stacks = 10
+			}
+			location = capital_province
+		}
+		spawn_army = {		  
+			uses_supply = no
+			inheritable = no
+			name = variag_invasion_event_troops
+			men_at_arms = {
+				type = variag_horse_archers
+				stacks = 3
+			}
+			men_at_arms = {
+				type = windriders_of_khand
+				stacks = 5
+			}
+			men_at_arms = {
+				type = variag_axemen
+				stacks = 4
+			}
+			men_at_arms = {
+				type = variag_pikemen
+				stacks = 2
+			}
+			men_at_arms = {
+				type = trebuchet
+				stacks = 10
+			}
+			location = capital_province
+		}
+		spawn_army = {		  
+			uses_supply = no
+			inheritable = no
+			name = variag_invasion_event_troops
+			men_at_arms = {
+				type = variag_horse_archers
+				stacks = 12
+			}
+			men_at_arms = {
+				type = windriders_of_khand
+				stacks = 17
+			}
+			men_at_arms = {
+				type = trebuchet
+				stacks = 10
+			}
+			location = capital_province
+		}
 	}
 
 	ai_goal = yes
