@@ -105,7 +105,7 @@ on_county_occupied = {
 				# Send a message (and gold!) to the Variag Conqueror
 				send_interface_message = {
 					type = event_war_good
-					title = mongols_sieged_county.t
+					title = variags_sieged_county.t
 					left_icon = scope:previous_controller
 					right_icon = scope:county
 					add_gold = {
@@ -124,7 +124,7 @@ on_county_occupied = {
 				scope:county.holder = {
 					send_interface_message = {
 						type = event_war_bad
-						title = mongols_sieged_county.t
+						title = variags_sieged_county.t
 						left_icon = scope:variag_ruler
 						right_icon = scope:county
 						scope:county = {

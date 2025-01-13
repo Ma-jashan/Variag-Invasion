@@ -1,0 +1,9 @@
+﻿l_english:
+
+ VARIAG_INVASION_WAR_NAME:1 "Variag Invasion for the [TITLE.GetBaseName]"
+ VARIAG_INVASION_KINGDOM_NAME:0 "Variag Invasion for [kingdom|E]"
+ VARIAG_INVASION_EMPIRE_NAME:0 "Variag Invasion for [empire|E]"
+
+ VARIAG_SUBJUGATION_WAR_NAME:1 "Variag subjugation of the [TITLE.GetBaseName]"
+ VARIAG_SUBJUGATION_KINGDOM_NAME:0 "Variag subjugation of [kingdom|E]"
+ VARIAG_SUBJUGATION_EMPIRE_NAME:0 "Variag subjugation of [empire|E]"
