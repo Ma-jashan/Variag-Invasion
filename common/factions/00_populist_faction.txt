@@ -214,9 +214,13 @@
 		custom_description = {
 			text = character_is_immune_to_factions
 			subject = scope:target
-			AND = {
-				has_trait = conqueror
-				faith = { has_doctrine = special_doctrine_is_chosen_people }
+			scope:target = {
+				NOT = {
+					AND = {
+						has_trait = conqueror
+						faith = { has_doctrine = special_doctrine_is_chosen_people }
+					}
+				}
 			}
 		}
 	}

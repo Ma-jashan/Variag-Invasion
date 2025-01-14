@@ -20,6 +20,12 @@ decision_variag_conqueror = {
 		NOT = { 
 			has_trait = variag_conqueror
 		}
+		NOT = { 
+			AND = {
+				has_game_rule = variag_invasion_on_sauron_defeat
+				sauron_is_alive = yes
+			}
+		 }
 	}
 	is_valid = {
 		OR = {

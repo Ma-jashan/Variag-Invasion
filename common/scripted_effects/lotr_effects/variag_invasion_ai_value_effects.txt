@@ -12,6 +12,7 @@
 			is_landed = yes
 			is_adult = yes
 			faith = { has_doctrine = special_doctrine_is_chosen_people }
+			culture = culture:variag
 			age <= 60
 			NOT = { is_incapable = yes }
 			highest_held_title_tier >= tier_duchy

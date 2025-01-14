@@ -13,6 +13,12 @@ variag_invasion_war = {
 		NOT = {
 			has_trait = variag_conqueror
 		}
+		NOT = { 
+			AND = {
+				has_game_rule = variag_invasion_on_sauron_defeat
+				sauron_is_alive = yes
+			}
+		 }
 		has_trait = conqueror
 		faith = { has_doctrine = special_doctrine_is_chosen_people }
 	}
@@ -1037,6 +1043,12 @@ variag_subjugation_war = {
 		NOT = {
 			has_trait = variag_conqueror
 		}
+		NOT = { 
+			AND = {
+				has_game_rule = variag_invasion_on_sauron_defeat
+				sauron_is_alive = yes
+			}
+		 }
 		has_trait = conqueror
 		faith = { has_doctrine = special_doctrine_is_chosen_people }
 	}
