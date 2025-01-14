@@ -21,6 +21,7 @@ variag_invasion_war = {
 		 }
 		has_trait = conqueror
 		faith = { has_doctrine = special_doctrine_is_chosen_people }
+		culture = culture:variag
 	}
 
 	allowed_against_character = {
@@ -1051,6 +1052,7 @@ variag_subjugation_war = {
 		 }
 		has_trait = conqueror
 		faith = { has_doctrine = special_doctrine_is_chosen_people }
+		culture = culture:variag
 	}
 
 	allowed_against_character = {

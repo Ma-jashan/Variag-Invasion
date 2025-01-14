@@ -90,6 +90,7 @@ on_county_occupied = {
 					root = {
 						has_trait = conqueror
 						faith = { has_doctrine = special_doctrine_is_chosen_people }
+						culture = culture:variag
 					}
 					scope:previous_controller = {
 						NOT = { faith = { has_doctrine = special_doctrine_is_chosen_people } }
