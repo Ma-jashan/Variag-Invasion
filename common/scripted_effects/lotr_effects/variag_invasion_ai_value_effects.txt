@@ -25,6 +25,7 @@
 				has_trait = shy
 				has_trait = conqueror
 				has_trait = lazy
+				has_trait = craven
 			}
 			trigger_if = {
 				limit = {

@@ -209,20 +209,6 @@
 			subject = scope:target
 			NOT = { scope:target = { immune_to_factions_trigger = yes } }
 		}
-
-		#Variag Invasions
-		custom_description = {
-			text = character_is_immune_to_factions
-			subject = scope:target
-			scope:target = {
-				NOT = {
-					AND = {
-						has_trait = conqueror
-						faith = { has_doctrine = special_doctrine_is_chosen_people }
-					}
-				}
-			}
-		}
 	}
 
 	can_character_become_leader = {
@@ -361,6 +347,16 @@
 				title_province.faith = scope:faction.faction_target.faith
 				# And we do NOT share a Culture Group with the faction leader.
 				NOT = { this.title_province.culture = { has_same_culture_heritage = scope:faction.var:faction_culture } }
+			}
+		}
+
+		# Variag Invasion
+		modifier = {
+			add = -5000
+			scope:faction.faction_target = {
+					has_trait = conqueror
+					faith = { has_doctrine = special_doctrine_is_chosen_people }
+					culture = culture:variag
 			}
 		}
 

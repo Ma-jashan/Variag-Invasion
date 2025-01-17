@@ -20,7 +20,7 @@ convert_to_local_culture_decision = {
 			}
 		}
 		culture = { culture_conversion_to_allowed_culture = { TARGET = root.capital_province.culture } } #LotR
-		faith = { NOT = { has_doctrine = special_doctrine_is_chosen_people } }
+		faith = { NOT = { has_doctrine = special_doctrine_is_chosen_people } } # Variag Succession
 	}
 
 	is_valid_showing_failures_only = {
@@ -103,6 +103,14 @@ convert_to_local_culture_decision = {
 				multiply = 0.25
 			}
 
+			# Variag Invasion
+			if = {
+				limit = {
+					culture = culture:variag
+				}
+				divide = 10
+			}
+
 			# Make sure it's never dumb numbers.
 			min = 25
 		}
@@ -180,6 +188,13 @@ convert_to_local_culture_decision = {
 				culture = capital_province.culture
 				culture = liege.culture
 			}
+		}
+
+		# Variag Invasion
+		modifier = { 
+
+			add = 100
+			culture = culture:variag
 		}
 
 		# Reduced chance for every vassal who has your old culture
