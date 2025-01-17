@@ -1,9 +1,6 @@
 ﻿lotr_yearly_global_pulse = {
 	effect =  {
 
-		# Variag Invasions
-		variag_ai_chance_to_become_conqueror_effect = yes
-
 		every_settlement_counties = {
 			if = { 
 				limit = { title_province ?= { has_building = spider_nest_cleared } }
@@ -282,6 +279,10 @@
 
 lotr_yearly_playable_pulse = {
 	effect = {
+
+
+		# Variag Invasions
+		variag_ai_chance_to_become_conqueror_effect = yes
 
 		### Thani-Hazad Struggle Catalysts ###
 		if = { # Struggle Catalyst
