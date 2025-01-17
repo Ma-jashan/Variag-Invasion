@@ -21,6 +21,8 @@ variag_conqueror = {
 	light_cavalry_damage_mult = 1
 	
 	shown_in_ruler_designer = no
+
+	ai_rationality = -100
 	
 	desc = {
 		first_valid = {

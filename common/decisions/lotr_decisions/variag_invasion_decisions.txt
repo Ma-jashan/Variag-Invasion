@@ -68,6 +68,7 @@ decision_variag_conqueror = {
 				type = trebuchet
 				stacks = 20
 			}
+			levies = 2000
 			location = capital_province
 		}
 		spawn_army = {		  
@@ -94,6 +95,7 @@ decision_variag_conqueror = {
 				type = trebuchet
 				stacks = 20
 			}
+			levies = 2000
 			location = capital_province
 		}
 		spawn_army = {		  
@@ -112,6 +114,7 @@ decision_variag_conqueror = {
 				type = trebuchet
 				stacks = 20
 			}
+			levies = 2000
 			location = capital_province
 		}
 	}

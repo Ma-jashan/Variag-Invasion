@@ -60,6 +60,7 @@ conqueror.0001 = {
 				type = trebuchet
 				stacks = 20
 			}
+			levies = 2000
 			location = capital_province
 		}
 	}
@@ -719,6 +720,7 @@ conqueror.1100 = {
 		if = { # Variag Invasion - Troops
 			limit = {
 				faith = { has_doctrine = special_doctrine_is_chosen_people }
+				culture = culture:variag
 			}
 			spawn_army = {		  
 				uses_supply = no
@@ -736,6 +738,7 @@ conqueror.1100 = {
 					type = trebuchet
 					stacks = 20
 				}
+				levies = 2000
 				location = root.capital_province
 			}
 		}

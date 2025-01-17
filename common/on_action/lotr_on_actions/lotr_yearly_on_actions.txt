@@ -1,5 +1,9 @@
 ﻿lotr_yearly_global_pulse = {
 	effect =  {
+
+		# Variag Invasions
+		variag_ai_chance_to_become_conqueror_effect = yes
+
 		every_settlement_counties = {
 			if = { 
 				limit = { title_province ?= { has_building = spider_nest_cleared } }
@@ -450,8 +454,6 @@ lotr_three_year_playable_pulse = {
 lotr_five_year_playable_pulse = {
 	effect = {
 
-		# Variag Invasions
-		variag_ai_chance_to_become_conqueror_effect = yes
 
 		# LotR - Check for completed colonies and upgrade
 		if = {
