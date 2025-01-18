@@ -15,10 +15,7 @@
 			culture = culture:variag
 			age <= 60
 			NOT = { is_incapable = yes }
-			OR = {
-				highest_held_title_tier >= tier_duchy
-				has_trait = ambitious
-			}
+			has_trait = ambitious
 			NOR = {
 				any_ally = {
 					is_ai = no # Would be annoying as conquerors don't help their allies
@@ -52,7 +49,7 @@
 				}
 				AND = {
 					exists = global_var:active_conquerors 
-					global_var:active_conquerors < 20
+					global_var:active_conquerors < 12
 				}
 			}
 		}

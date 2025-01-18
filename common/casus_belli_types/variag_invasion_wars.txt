@@ -82,7 +82,9 @@ variag_invasion_war = {
 
 	valid_to_start = {
 		scope:target = {
-			tier = tier_kingdom
+			any_this_title_or_de_jure_above = {
+				tier = tier_kingdom
+			} 
 		}
 	}
 
@@ -1070,7 +1072,9 @@ variag_subjugation_war = {
 	
 	valid_to_start = {
 		scope:target = {
-			tier = tier_kingdom
+			any_this_title_or_de_jure_above = {
+				tier = tier_kingdom
+			} 
 		}
 	}
 
