@@ -46,8 +46,17 @@ ask_for_conversion_interaction = {
 			text = chosen_cannot_force_non_chosen_to_convert
 			NOT = {
 				AND = {
-					scope:recipient = { NOT = { faith = { has_doctrine = special_doctrine_is_chosen_people } } }
-					scope:actor = { faith = { has_doctrine = special_doctrine_is_chosen_people } }
+					has_game_rule = tumrakhi_chosen_enabled
+					scope:recipient = { 
+						NOT = { 
+							faith = { has_doctrine = special_doctrine_is_chosen_people } 
+							culture = culture:variag
+						} 
+					}
+					scope:actor = { 
+						faith = { has_doctrine = special_doctrine_is_chosen_people } 
+						culture = culture:variag
+					}
 				}
 			}
 		}
@@ -256,8 +265,17 @@ ask_for_conversion_courtier_interaction = {
 			text = chosen_cannot_force_non_chosen_to_convert
 			NOT = {
 				AND = {
-					scope:recipient = { NOT = { faith = { has_doctrine = special_doctrine_is_chosen_people } } }
-					scope:actor = { faith = { has_doctrine = special_doctrine_is_chosen_people } }
+					has_game_rule = tumrakhi_chosen_enabled
+					scope:recipient = { 
+						NOT = { 
+							faith = { has_doctrine = special_doctrine_is_chosen_people } 
+							culture = culture:variag
+						} 
+					}
+					scope:actor = { 
+						faith = { has_doctrine = special_doctrine_is_chosen_people } 
+						culture = culture:variag
+					}
 				}
 			}
 		}
@@ -639,8 +657,17 @@ demand_conversion_interaction = {
 			text = chosen_cannot_force_non_chosen_to_convert
 			NOT = {
 				AND = {
-					scope:recipient = { NOT = { faith = { has_doctrine = special_doctrine_is_chosen_people } } }
-					scope:actor = { faith = { has_doctrine = special_doctrine_is_chosen_people } }
+					has_game_rule = tumrakhi_chosen_enabled
+					scope:recipient = { 
+						NOT = { 
+							faith = { has_doctrine = special_doctrine_is_chosen_people } 
+							culture = culture:variag
+						} 
+					}
+					scope:actor = { 
+						faith = { has_doctrine = special_doctrine_is_chosen_people } 
+						culture = culture:variag
+					}
 				}
 			}
 		}
@@ -926,8 +953,17 @@ demand_conversion_vassal_ruler_interaction = {
 			text = chosen_cannot_force_non_chosen_to_convert
 			NOT = {
 				AND = {
-					scope:recipient = { NOT = { faith = { has_doctrine = special_doctrine_is_chosen_people } } }
-					scope:actor = { faith = { has_doctrine = special_doctrine_is_chosen_people } }
+					has_game_rule = tumrakhi_chosen_enabled
+					scope:recipient = { 
+						NOT = { 
+							faith = { has_doctrine = special_doctrine_is_chosen_people } 
+							culture = culture:variag
+						} 
+					}
+					scope:actor = { 
+						faith = { has_doctrine = special_doctrine_is_chosen_people } 
+						culture = culture:variag
+					}
 				}
 			}
 		}
@@ -1415,8 +1451,17 @@ demand_conversion_player_ruler_interaction = {
 			text = chosen_cannot_force_non_chosen_to_convert
 			NOT = {
 				AND = {
-					scope:recipient = { NOT = { faith = { has_doctrine = special_doctrine_is_chosen_people } } }
-					scope:actor = { faith = { has_doctrine = special_doctrine_is_chosen_people } }
+					has_game_rule = tumrakhi_chosen_enabled
+					scope:recipient = { 
+						NOT = { 
+							faith = { has_doctrine = special_doctrine_is_chosen_people } 
+							culture = culture:variag
+						} 
+					}
+					scope:actor = { 
+						faith = { has_doctrine = special_doctrine_is_chosen_people } 
+						culture = culture:variag
+					}
 				}
 			}
 		}
@@ -1744,8 +1789,17 @@ convert_to_religion_interaction = {
 		text = non_chosen_cannot_convert_to_chosen
 		NOT = {
 			AND = {
-				scope:recipient = { faith = { has_doctrine = special_doctrine_is_chosen_people } }
-				scope:actor = { NOT = { faith = { has_doctrine = special_doctrine_is_chosen_people } } }
+				has_game_rule = tumrakhi_chosen_enabled
+				scope:recipient = { 
+					NOT = { 
+						faith = { has_doctrine = special_doctrine_is_chosen_people } 
+						culture = culture:variag
+					} 
+				}
+				scope:actor = { 
+					faith = { has_doctrine = special_doctrine_is_chosen_people } 
+					culture = culture:variag
+				}
 			}
 		}
 	}

@@ -566,8 +566,10 @@ task_conversion = {
 			}
 			trigger_if = { #Variag Invasion - Variags should not seek to convert non-Variags due to their belief of being the chosen people
 				limit = {
+					has_game_rule = tumrakhi_chosen_enabled
 					scope:councillor_liege = {
 						faith = { has_doctrine = special_doctrine_is_chosen_people }
+						culture = culture:variag
 					}
 				}
 				custom_tooltip = {

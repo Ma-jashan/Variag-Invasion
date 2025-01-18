@@ -3,7 +3,7 @@ variag_invasion_start_rule = {
 	default = variag_invasion_on_sauron_defeat
 
 	categories = {
-		realms historicity ai
+		realms historicity ai variags
 	}
 
 	variag_invasion_on_sauron_defeat = {
@@ -20,7 +20,7 @@ tumrakhi_chosen_doctrine_rule = {
 	default = tumrakhi_chosen_enabled
 
 	categories = {
-		realms historicity faith
+		realms historicity faith variags
 	}
 
 	tumrakhi_chosen_enabled = {
