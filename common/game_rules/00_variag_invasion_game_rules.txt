@@ -32,3 +32,36 @@ tumrakhi_chosen_doctrine_rule = {
 	}
 	
 }
+
+variag_tributary_rule = {
+	default = variags_become_tributary
+
+	categories = {
+		realms historicity variags difficulty
+	}
+
+	variags_become_tributary = {
+
+	}
+
+	variags_dont_become_tributary = {
+
+	}
+	
+}
+
+variag_strength_rule = {
+	default = no_strength_bonus
+	
+	categories = {
+		realms variags difficulty
+	}
+
+	no_strength_bonus = {
+
+	}
+
+	strength_bonus = {
+		
+	}
+}

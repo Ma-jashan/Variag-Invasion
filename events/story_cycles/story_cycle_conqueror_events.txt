@@ -40,30 +40,45 @@ conqueror.0001 = {
 			add_prestige = 800
 		}
 
-		if = { # Variag Invasion - Starter package!
-		limit = {
-			faith = { has_doctrine = special_doctrine_is_chosen_people }
+		if = { # Variag Invasion - Starter package
+			limit = {
+				faith = { has_doctrine = special_doctrine_is_chosen_people }
+				culture = culture:variag
+			}
+			spawn_army = {		  
+				uses_supply = no
+				inheritable = no
+				name = variag_invasion_event_troops
+				men_at_arms = {
+					type = variag_horse_archers
+					stacks = 22
+				}
+				men_at_arms = {
+					type = windriders_of_khand
+					stacks = 16
+				}
+				men_at_arms = {
+					type = trebuchet
+					stacks = 20
+				}
+				levies = 2000
+				location = capital_province
+			}
 		}
-		spawn_army = {		  
-			uses_supply = no
-			inheritable = no
-			name = variag_invasion_event_troops
-			men_at_arms = {
-				type = variag_horse_archers
-				stacks = 22
+		if = { # Variag Invasion - Make Tributary
+			limit = {
+				faith = { has_doctrine = special_doctrine_is_chosen_people }
+				culture = culture:variag
+				has_game_rule = variags_become_tributary
 			}
-			men_at_arms = {
-				type = windriders_of_khand
-				stacks = 16
+			hidden_effect = { 
+				make_tributary = {
+					TYPE = tributary_non_permanent
+					SUZERAIN = character:lineofsauron 
+					TRIBUTARY = root
+				}
 			}
-			men_at_arms = {
-				type = trebuchet
-				stacks = 20
-			}
-			levies = 2000
-			location = capital_province
 		}
-	}
 	}
 
 	option = {

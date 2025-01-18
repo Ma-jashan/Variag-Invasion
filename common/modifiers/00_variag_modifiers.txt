@@ -1,0 +1,13 @@
+﻿tumrakhis_blessing_modifier = {
+	icon = flame_positive
+	epidemic_resistance = 50
+	enemy_hostile_scheme_phase_duration_add = 75
+	enemy_hostile_scheme_success_chance_max_add = -60
+	enemy_hostile_scheme_success_chance_growth_add = -10
+	army_siege_value_mult = 1
+	siege_phase_time = -0.5
+	advantage = 25
+	maa_siege_value_add = 1
+	monthly_county_control_growth_add = 5
+	movement_speed = 0.25
+}
