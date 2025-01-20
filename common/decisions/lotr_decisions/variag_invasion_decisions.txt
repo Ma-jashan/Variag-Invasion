@@ -31,9 +31,18 @@ decision_variag_conqueror = {
 		OR = {
 			has_title = title:e_khand
 			AND = {
-				completely_controls = title:k_lower_khand
-				completely_controls = title:k_upper_khand
         		highest_held_title_tier = tier_empire
+				custom_tooltip = {
+					text = khand_control
+					any_county_in_region = {
+						region = middleearth_rhun_khand
+						OR = {
+							holder = { is_vassal_or_below_of = root }
+							holder = root
+						}
+						percent >= 0.7
+					}
+				}
 			}
 		}
 	}
