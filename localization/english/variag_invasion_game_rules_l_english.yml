@@ -1,0 +1,28 @@
+﻿l_english:
+
+ game_rule_category_variags:0 "Variag Invasion"
+
+ rule_variag_invasion_start_rule:0 "Invasion Start"
+ setting_variag_invasion_on_sauron_defeat:0 "Post Sauron"
+ setting_variag_invasion_on_sauron_defeat_desc:0 "Ambitious Tûmrakhi Variags will start becoming Conquerors ~3 years after Morder is destroyed. Variags can still become conquerors before then but will get no special troops or casus-belli"
+ setting_variag_invasion_on_game_start:0 "Game Start"
+ setting_variag_invasion_on_game_start_desc:0 "Ambitious Tûmrakhi Variags will start becoming Conquerors ~3 years after game start"
+
+ rule_tumrakhi_chosen_doctrine_rule:0 "Variag Special Doctrine"
+ setting_tumrakhi_chosen_enabled:0 "Enabled"
+ setting_tumrakhi_chosen_enabled_desc:0 "Tûmrakhi Variags cannot convert non-Variag counties or vassals."
+ setting_tumrakhi_chosen_disabled:0 "Disabled"
+ setting_tumrakhi_chosen_disabled_desc:0 "Tûmrakhi Variags can convert non-Variag counties or vassals."
+
+ rule_variag_tributary_rule:0 "Variag Tributaries"
+ setting_variags_become_tributary:0 "Enabled"
+ setting_variags_become_tributary_desc:0 "Tûmrakhi Variag Conquerors will become Tributaries to Sauron if he is still alive."
+ setting_variags_dont_become_tributary:0 "Disabled"
+ setting_variags_dont_become_tributary_desc:0 "Tûmrakhi Variags Conquerors will not become Tributaries to Sauron if he is still alive."
+
+ rule_variag_strength_rule:0 "Tûmrakhi's Blessing Modifier"
+ setting_no_strength_bonus:0 "Disabled"
+ setting_no_strength_bonus_desc:0 "Tûmrakhi Variag Conquerors will not gain the Tûmrakhi's Blessing Modifier." 
+ setting_strength_bonus:0 "Enabled"
+ setting_strength_bonus_desc:0 "Tûmrakhi Variag Conquerors will gain the Tûmrakhi's Blessing Modifier. Will not stack with Scourge of the Valar."
+
