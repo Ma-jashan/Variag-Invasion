@@ -10,6 +10,7 @@
 				remove_trait = conqueror
 				remove_character_modifier = ai_extreme_conqueror_modifier
 				remove_character_modifier = ai_weak_conqueror_modifier
+				remove_character_modifier = tumrakhis_blessing_modifier #Variag Invasion
 			}
 			end_story = yes
 		}
@@ -40,6 +41,7 @@
 					limit = {
 						NOT = { has_variable = invisible_conqueror_story } #LotR
 						has_game_rule = random_conquerors_bonuses
+						NOT = { has_game_rule = strength_bonus} # Variag Invasion
 					}
 					random_list = {
 						95 = {
@@ -62,6 +64,7 @@
 						has_game_rule = extreme_conquerors_bonuses
 						is_ai = yes
 						NOT = { has_character_modifier = ai_extreme_conqueror_modifier }
+						NOT = { has_game_rule = strength_bonus} # Variag Invasion
 					}
 					add_trait = conqueror
 					add_character_modifier = {
@@ -107,6 +110,7 @@
 				remove_trait = conqueror
 				remove_character_modifier = ai_extreme_conqueror_modifier
 				remove_character_modifier = ai_weak_conqueror_modifier
+				remove_character_modifier = tumrakhis_blessing_modifier #Variag Invasion
 			}
 		}
 	}
@@ -135,6 +139,7 @@
 						if = {
 							limit = {
 								root.story_owner = { ai_should_get_conqueror_bonuses = yes }
+								NOT = { has_game_rule = strength_bonus} # Variag Invasion
 							}
 							add_trait = conqueror
 							if = {
@@ -144,6 +149,17 @@
 								}
 								add_character_modifier = {
 									modifier = ai_extreme_conqueror_modifier
+								}
+							}
+							else = {
+								limit = {
+									has_game_rule = strength_bonus
+									is_ai = yes
+									faith = { has_doctrine = special_doctrine_is_chosen_people }
+									culture = culture:variag
+								}
+								add_character_modifier = {
+									modifier = tumrakhis_blessing_modifier
 								}
 							}
 						}
@@ -162,6 +178,7 @@
 						if = {
 							limit = {
 								root.story_owner = { ai_should_get_conqueror_bonuses = yes }
+								NOT = { has_game_rule = strength_bonus} # Variag Invasion
 							}
 							add_trait = conqueror
 							if = {
@@ -171,6 +188,17 @@
 								}
 								add_character_modifier = {
 									modifier = ai_extreme_conqueror_modifier
+								}
+							}
+							else = {
+								limit = {
+									has_game_rule = strength_bonus
+									is_ai = yes
+									faith = { has_doctrine = special_doctrine_is_chosen_people }
+									culture = culture:variag	
+								}
+								add_character_modifier = {
+									modifier = tumrakhis_blessing_modifier
 								}
 							}
 						}

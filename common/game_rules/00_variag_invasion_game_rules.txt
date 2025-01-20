@@ -52,7 +52,7 @@ variag_tributary_rule = {
 
 variag_strength_rule = {
 	default = no_strength_bonus
-	
+
 	categories = {
 		realms variags difficulty
 	}

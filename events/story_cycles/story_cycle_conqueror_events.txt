@@ -95,9 +95,22 @@ conqueror.0001 = {
 				limit = {
 					has_game_rule = extreme_conquerors_bonuses
 					is_ai = yes
+					NOT = { has_game_rule = strength_bonus} # Variag Invasion
 				}
 				add_character_modifier = {
 					modifier = ai_extreme_conqueror_modifier
+				}
+			}
+			else = { # Variag Invasion
+				limit = {
+					has_game_rule = strength_bonus
+					is_ai = yes
+					NOT = { has_game_rule = extreme_conquerors_bonuses}
+					faith = { has_doctrine = special_doctrine_is_chosen_people }
+					culture = culture:variag
+				}
+				add_character_modifier = {
+					modifier = tumrakhis_blessing_modifier
 				}
 			}
 		}
@@ -251,6 +264,7 @@ conqueror.0002 = {
 		name = conqueror.0002.a
 		flavor = conqueror_end_flavor
 		remove_character_modifier = ai_extreme_conqueror_modifier
+		remove_character_modifier = tumrakhis_blessing_modifier
 		remove_character_modifier = ai_weak_conqueror_modifier
 		remove_trait = conqueror
 		add_prestige_level = -2
