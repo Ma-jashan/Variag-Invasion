@@ -70,6 +70,7 @@ conqueror.0001 = {
 				faith = { has_doctrine = special_doctrine_is_chosen_people }
 				culture = culture:variag
 				has_game_rule = variags_become_tributary
+				sauron_is_alive = yes
 			}
 			hidden_effect = { 
 				make_tributary = {

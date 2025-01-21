@@ -6,3 +6,5 @@
  decision_variag_conqueror_confirm:0 "Glory is my birthright."
 
  variag_invasion_event_troops:0 "Variag Hosts"
+
+ khand_control:0 "You control at least #V 70%#! of the [GetGeographicalRegion('middleearth_rhun_khand').GetName] region"

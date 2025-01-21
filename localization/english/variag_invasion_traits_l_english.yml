@@ -1,5 +1,5 @@
 ﻿l_english:
 	#Variag Conqueror
- trait_variag_conqueror:0 "Khûdriag-Ata"
+ trait_variag_conqueror:0 "Khûdriag-Ata of Khand"
  trait_variag_conqueror_desc:0 "This character has claimed the mantle of God-King to enforce the will of Tûmrakhi across all of [middleearth|E]."
  trait_variag_conqueror_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has claimed the mantle of God-King to enforce the will of Tûmrakhi across all of [middleearth|E]."
