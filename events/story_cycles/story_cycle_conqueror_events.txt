@@ -44,6 +44,12 @@ conqueror.0001 = {
 			limit = {
 				faith = { has_doctrine = special_doctrine_is_chosen_people }
 				culture = culture:variag
+				NOT = { 
+					AND = {
+						has_game_rule = variag_invasion_on_sauron_defeat
+						sauron_is_alive = yes
+					}
+				 }
 			}
 			spawn_army = {		  
 				uses_supply = no
@@ -751,6 +757,12 @@ conqueror.1100 = {
 			limit = {
 				faith = { has_doctrine = special_doctrine_is_chosen_people }
 				culture = culture:variag
+				NOT = { 
+					AND = {
+						has_game_rule = variag_invasion_on_sauron_defeat
+						sauron_is_alive = yes
+					}
+				 }
 			}
 			spawn_army = {		  
 				uses_supply = no
