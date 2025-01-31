@@ -1636,7 +1636,6 @@ tradition_variag_succession = {
 		can_designate_heir = yes
 		cannot_hybridize = yes
 		cannot_diverge = yes
-		culture_can_raid_at_sea_even_if_feudal = yes
 	}
 	
 	character_modifier = {
