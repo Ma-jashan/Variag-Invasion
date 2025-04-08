@@ -264,7 +264,7 @@ talataerim_religion = {
 			doctrine = doctrine_clerical_succession_spiritual_fixed_appointment
 			doctrine = doctrine_clerical_marriage_disallowed
 
-			# Special doctrine to make variags not conver other cultures to their religion 
+			# Variag Invasion - Special doctrine to make variags not conver other cultures to their religion 
 			doctrine = special_doctrine_is_chosen_people
 			
 			localization = { # potentially could also integrate the 'old' Khandish gods in some way, but on the whole, very monotheistic

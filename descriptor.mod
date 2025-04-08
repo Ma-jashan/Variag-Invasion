@@ -5,4 +5,4 @@ tags={
 	"Religion"
 }
 name="LotR: Realms in Exile - Variag Invasion - Dev"
-supported_version="1.14.2.2"
+supported_version="1.15.*"

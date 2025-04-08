@@ -20,7 +20,7 @@ convert_to_local_culture_decision = {
 			}
 		}
 		culture = { culture_conversion_to_allowed_culture = { TARGET = root.capital_province.culture } } #LotR
-		faith = { NOT = { has_doctrine = special_doctrine_is_chosen_people } } # Variag Succession
+		faith = { NOT = { has_doctrine = special_doctrine_is_chosen_people } } # Variag Invasion
 	}
 
 	is_valid_showing_failures_only = {

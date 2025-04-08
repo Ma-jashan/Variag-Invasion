@@ -55,6 +55,9 @@ invasion_war = {
 		        }
 			}
 		} 
+
+		# The Necromancer is hidden
+		NOT = { has_character_flag = unknown_sauron_flag } # LOTR
 	}
 
 	allowed_for_character_display_regardless = {
@@ -121,6 +124,9 @@ invasion_war = {
 		        }
 			}
 		}
+
+		# The Necromancer is hidden
+		NOT = { has_character_flag = unknown_sauron_flag } # LOTR
 	}
 	
 	allowed_against_character_display_regardless = { #LotR Tributaries
@@ -175,6 +181,9 @@ invasion_war = {
 
 		# AI in struggles act insularly for wars that don't have a familial or legal basis.
 		multiply = struggle_wars_prioritise_struggle_targets_value
+		# Tell the Romans to stop going adventuring into the steppe for no gods-damned reason.
+		#multiply = byzantium_conquests_ai_score_value #LotR
+		#multiply = muslim_invasions_prefer_nonmuslims_ai_score_value #LotR
 		
 		#Declaring war on the frankokratia leader can really ruin the whole thing
 		if = {
@@ -611,6 +620,8 @@ clan_invasion_war = {
 				has_game_rule = limited_elven_expansion
 			}
 		}
+		# The Necromancer is hidden
+		NOT = { has_character_flag = unknown_sauron_flag } # LOTR
 	}
 
 	allowed_for_character_display_regardless = {
@@ -669,6 +680,8 @@ clan_invasion_war = {
 		        }
 			}
 		}
+		# The Necromancer is hidden
+		NOT = { has_character_flag = unknown_sauron_flag } # LOTR
 	}
 	
 	allowed_against_character_display_regardless = { #LotR Tributaries
@@ -721,6 +734,9 @@ clan_invasion_war = {
 
 		# AI in struggles act insularly for wars that don't have a familial or legal basis.
 		multiply = struggle_wars_prioritise_struggle_targets_value
+		# Tell the Romans to stop going adventuring into the steppe for no gods-damned reason.
+		#multiply = byzantium_conquests_ai_score_value
+		#multiply = muslim_invasions_prefer_nonmuslims_ai_score_value
 		
 		#Declaring war on the frankokratia leader can really ruin the whole thing
 		if = {

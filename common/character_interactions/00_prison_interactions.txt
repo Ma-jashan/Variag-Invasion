@@ -179,8 +179,8 @@ imprison_interaction = {
 					OR = {
 						has_imprisonment_reason = scope:recipient
 						AND = { #LotR
-							scope:actor = {is_orc = no}
-							scope:recipient = {is_orc = no}
+						scope:actor = {NOT = { is_orc = yes }}
+						scope:recipient = {NOT = { is_orc = yes }}
 						}
 						AND = { #LotR
 							scope:actor = {is_orc = yes}
@@ -1369,7 +1369,7 @@ move_to_dungeon_interaction = {
 			if = {
 				limit = {
 					OR = {
-						AND = {scope:actor = {is_orc = no} scope:recipient = {is_orc = no}}
+						AND = {scope:actor = {NOT = { is_orc = yes }} scope:recipient = {NOT = { is_orc = yes }}}
 						AND = {scope:actor = {is_orc = yes} scope:recipient = {is_orc = yes}}
 					}
 				}
@@ -1522,7 +1522,7 @@ move_to_house_arrest_interaction = {
 
 ransom_interaction = {
 	interface_priority = 50
-	common_interaction = yes
+	common_interaction = no
 	use_diplomatic_range = no
 	category = interaction_category_prison
 	special_interaction = ransom_interaction
@@ -2166,7 +2166,7 @@ ransom_interaction = {
 #For lieges to ransom their courtiers
 pay_ransom_interaction = {
 	interface_priority = 50
-	common_interaction = yes
+	common_interaction = no
 	use_diplomatic_range = no
 	category = interaction_category_prison
 	icon = icon_gold
@@ -4669,7 +4669,7 @@ release_from_prison_interaction = {
 			# LotR - Elven limits
 			custom_tooltip = {
 				text = elves_cannot_be_forced_to_convert
-				scope:recipient = { is_elf = no }
+				scope:recipient = { NOT = { is_elf = yes } }
 			}
 			custom_tooltip = { # Variag Invasion
 				text = chosen_cannot_force_non_chosen_to_convert		
@@ -4946,6 +4946,7 @@ release_from_prison_interaction = {
 						scope:recruit = yes
 					}
 				}
+
 			}
 			custom_description = {
 				text = "release_vows_invalid_not_your_faith"
@@ -5096,7 +5097,7 @@ release_from_prison_interaction = {
 			# LotR - Elven limits
 			custom_tooltip = {
 				text = elves_cannot_be_forced_to_recruit
-				scope:recipient = { is_elf = no }
+				scope:recipient = { NOT = { is_elf = yes } }
 			}
 		}
 	}
@@ -5112,7 +5113,8 @@ release_from_prison_interaction = {
 				liege_should_systematically_maim_co_ruler_trigger = no
 			}
 			scope:recipient = {
-				is_adult = yes
+				is_lotr_adult = yes #LotR
+				cannot_be_killed = no #LotR
 			}
 		}
 		is_valid = {
@@ -5154,13 +5156,16 @@ release_from_prison_interaction = {
 		localization = "RELEASE_BLIND"
 		is_shown = {
 			scope:actor = {
-				is_adult = yes
+				#is_adult = yes
+				is_lotr_adult = yes #LotR
 				culture = { has_cultural_parameter = can_blind_prisoners }
 				# If they're our partner emperor, we should use the maiming interaction instead.
 				liege_should_systematically_maim_co_ruler_trigger = no
 			}
 			scope:recipient = {
-				is_adult = yes
+				#is_adult = yes
+				is_lotr_adult = yes #LotR
+				cannot_be_killed = no #LotR
 			}
 		}
 		is_valid = {
@@ -5184,9 +5189,11 @@ release_from_prison_interaction = {
 				is_imprisoned_by = scope:actor
 				is_eunuch_trigger = no
 				is_male = yes
+				cannot_be_killed = no #LotR
 			}
 			scope:actor = {
-				is_adult = yes
+				#is_adult = yes
+				is_lotr_adult = yes #LotR
 				culture = {
 					has_cultural_parameter = can_castrate_prisoners
 				}
@@ -6490,7 +6497,7 @@ execute_prisoner_interaction = {
 								has_doctrine = doctrine_pluralism_fundamentalist
 							}
 							scope:actor = {
-							is_dwarf = no
+								NOT = { is_dwarf = yes }
 							}
 						}
 						AND = {
@@ -6546,7 +6553,7 @@ execute_prisoner_interaction = {
 					any_secret = { secret_type = secret_cannibal }
 					AND = {  #LotR
 						is_orc = yes
-						scope:recipient = { is_orc = no	}
+						scope:recipient = { NOT = { is_orc = yes }	}
 					}
 				}
 			}
@@ -6659,7 +6666,7 @@ debug_imprison_simple_interaction = {
 
 torture_interaction = {
 	interface_priority = 30
-	common_interaction = yes
+	common_interaction = no
 	icon = torture_interaction
 
 	category = interaction_category_prison
@@ -6890,7 +6897,7 @@ castrate_interaction = {
 			is_eunuch_trigger = no
 			is_male = yes
 			cannot_be_killed = no #LotR
-			is_elf = no #LotR
+			NOT = { is_elf = yes } #LotR
 		}
 		scope:actor = {
 			is_lotr_adult = yes #LotR
@@ -7059,7 +7066,7 @@ blind_interaction = {
 			is_imprisoned_by = scope:actor
 			NOT = { has_trait = blind }
 			cannot_be_killed = no #LotR
-			is_elf = no #LotR
+			NOT = { is_elf = yes } #LotR
 		}
 		scope:actor = {
 			is_lotr_adult = yes #LotR
@@ -7322,7 +7329,7 @@ systematically_maim_character_interaction = {
 	interface_priority = 30
 	icon = torture_interaction
 	category = interaction_category_diarch
-	common_interaction = yes
+	common_interaction = no
 	desc = systematically_maim_character_interaction_desc
 
 	is_shown = {
@@ -7349,6 +7356,7 @@ systematically_maim_character_interaction = {
 				has_trait = disfigured
 				has_trait = maimed
 				has_trait = one_legged
+				cannot_be_killed = no #LotR
 			}
 		}
 	}
